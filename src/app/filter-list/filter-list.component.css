@@ -1,0 +1,28 @@
+#filter-list {
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    width: 10vw;
+    border-right: 1px solid rgba(0,0,0,.1);
+}
+.btn-primary {
+    text-decoration: none;
+    border: none;
+    text-align: center;
+    margin: 1vh 1vw;
+    font-weight: 500;
+    font-size: 1.1rem;
+    height: fit-content;
+    padding: 1vh 2vw;
+    background-color: rgb(49, 138, 255);
+    border-radius: 5px;
+    color: #fff;
+}
+.btn-primary:hover {
+    background-color: rgb(13, 114, 247);
+    box-shadow: 3px 0px rgba(0, 128, 11, 0.288);
+}
+.btn-primary:active{
+    background-color: rgb(6, 95, 211);
+    box-shadow: 4px 0px rgba(0, 128, 11, 0.507);
+}

@@ -1,0 +1,10 @@
+<div id="events-list">
+    <div *ngFor="let event of events" class="event-body">
+        <h2 class="event-title">{{event.title}}</h2>
+        <h3 class="event-category">{{event.category}}</h3>
+        <p class="event-desc">{{event.description}}</p>
+        <h3 class="event-time">{{event.eventDate}}</h3>
+        <div class="event-future-indicator"></div>
+        
+    </div>
+</div>
