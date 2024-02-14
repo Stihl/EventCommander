@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { calEvent } from '../event';
+import { EventCoreService } from '../../event-core.service';
 
 @Component({
   selector: 'app-events-list',
@@ -7,23 +8,21 @@ import { calEvent } from '../event';
   styleUrl: './events-list.component.css'
 })
 export class EventsListComponent {
-  constructor(){
-
-  }
+  constructor(private event_c: EventCoreService) { }
   events:calEvent[] = [];
 
-  ngOnInit(): void{
-    for(let x:number= 0; x < 5; x++){
-      let eventOne:calEvent = {
-        id: x,
-        title: "Event"+x,
-        description: `Description of event ${x}`,
-        category: "Hobby",
-        eventDate: Date.now()
-
-      }
-      
-      this.events.push(eventOne);
-    }
+  ngOnInit():void {
+    this.getEvents();
+    //Filter by category?
+    /* for (let event of this.events){
+      console.log(event.title);
+    } */
   }
+
+  getEvents(): void {
+    this.event_c.getEvents().subscribe((eventsList) => this.events = eventsList);
+  }
+  
+
+  
 }

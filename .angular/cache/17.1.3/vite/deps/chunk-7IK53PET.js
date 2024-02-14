@@ -8,7 +8,7 @@ import {
   isPlatformServer,
   parseCookieValue,
   setRootDomAdapter
-} from "./chunk-OY2YHKMJ.js";
+} from "./chunk-IGU6QSFS.js";
 import {
   APP_BOOTSTRAP_LISTENER,
   APP_ID,
@@ -25,7 +25,6 @@ import {
   InjectionToken,
   NgModule,
   NgZone,
-  Observable,
   Optional,
   PLATFORM_ID,
   PLATFORM_INITIALIZER,
@@ -43,10 +42,6 @@ import {
   Version,
   ViewEncapsulation$1,
   XSS_SECURITY_URL,
-  __async,
-  __objRest,
-  __spreadProps,
-  __spreadValues,
   _global,
   _sanitizeHtml,
   _sanitizeUrl,
@@ -56,26 +51,18 @@ import {
   bypassSanitizationTrustScript,
   bypassSanitizationTrustStyle,
   bypassSanitizationTrustUrl,
-  concatMap,
   createPlatformFactory,
-  filter,
-  finalize,
   formatRuntimeError,
   forwardRef,
-  from,
   inject,
   internalCreateApplication,
   makeEnvironmentProviders,
   makeStateKey,
-  map,
-  of,
   performanceMarkFeature,
   platformCore,
   runInInjectionContext,
   setClassMetadata,
   setDocument,
-  switchMap,
-  tap,
   truncateMiddle,
   unwrapSafeValue,
   whenStable,
@@ -84,9 +71,24 @@ import {
   ɵɵdefineInjector,
   ɵɵdefineNgModule,
   ɵɵinject
-} from "./chunk-JEG2PW3Z.js";
+} from "./chunk-Z34T3VMF.js";
+import {
+  Observable,
+  __async,
+  __objRest,
+  __spreadProps,
+  __spreadValues,
+  concatMap,
+  filter,
+  finalize,
+  from,
+  map,
+  of,
+  switchMap,
+  tap
+} from "./chunk-SXIXOCJ4.js";
 
-// ../node_modules/@angular/common/fesm2022/http.mjs
+// node_modules/@angular/common/fesm2022/http.mjs
 var HttpHandler = class {
 };
 var HttpBackend = class {
@@ -2232,7 +2234,7 @@ function appendMissingHeadersDetection(url, headers, headersToInclude) {
   });
 }
 
-// ../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs
+// node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs
 var GenericBrowserDomAdapter = class extends DomAdapter {
   constructor() {
     super(...arguments);
@@ -4060,4 +4062,4 @@ export {
    * License: MIT
    *)
 */
-//# sourceMappingURL=chunk-GIFUNVID.js.map
+//# sourceMappingURL=chunk-7IK53PET.js.map
