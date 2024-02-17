@@ -11,6 +11,7 @@ export class EventsListComponent {
   constructor(private event_c: EventCoreService) { }
   events:calEvent[] = [];
   filteredEvents:calEvent[] = [];
+  dateToday = new Date(Date.now())
 
   ngOnInit():void {
     this.getEvents();

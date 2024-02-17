@@ -3,9 +3,16 @@
         <h2 class="event-title">{{event.title}}</h2>
         <h3 class="event-category">{{event.category}}</h3>
         <p class="event-desc">{{event.description}}</p>
-        <h3 class="event-time">{{event.eventDate}}</h3>
+        <h3 class="event-time">{{event.eventDate.toDateString()}}</h3>
         <div>
-            <div class="event-future-indicator"></div>    
+            <div *ngIf="event.eventDate.getMilliseconds() > dateToday.getMilliseconds(); else elseBlock">
+                <div class="event-future-indicator"></div>
+            </div>
+            <ng-template #elseBlock>
+                <div class="event-past-indicator"></div>
+            </ng-template>
+            
+
         </div>
         
         

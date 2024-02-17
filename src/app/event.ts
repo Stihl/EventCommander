@@ -3,5 +3,5 @@ export interface calEvent{
     title: string;
     description: string;
     category: string;
-    eventDate: number;
+    eventDate: Date;
 }

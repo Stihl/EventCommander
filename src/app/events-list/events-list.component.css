@@ -1,11 +1,13 @@
 
 #events-list{
     
-    height: 90vh;
-    width: 90vw;
+    height: 90vh;    
     overflow: scroll;
+
     
-    
+}
+#events-list::-webkit-scrollbar {
+    display: none;
 }
 .event-future-indicator{
     display: block;
@@ -27,9 +29,10 @@
 }
 
 .event-body{
-    margin: 0 auto;
+    margin: 1%;
     padding: 1%;
-    border:1px solid rgba(0,0,0,.1);
+    border-radius: 10px;
+    border:2px solid rgba(105, 105, 105, 0.158);
     border-top: none;
     display: grid;
     grid-template-columns: 1fr 1fr .5fr;
@@ -37,14 +40,11 @@
     
 }
 .event-body:hover {
-    background-color: #dfdfdf;
-}
-.event-body:nth-child(2n+1){
-    background-color: aliceblue;
+    background-color: rgb(21, 40, 56);
 }
 .event-body:nth-child(2n+1):hover{
     
-    background-color: rgb(208, 219, 230);
+    background-color: rgb(21, 40, 56);
 }
 
 .event-title{

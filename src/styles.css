@@ -2,4 +2,9 @@
 *{
     margin: 0;
     font-family: sans-serif;
+    
+}
+body{
+    background-color: rgb(17, 33, 46);
+    color:#fff;
 }
