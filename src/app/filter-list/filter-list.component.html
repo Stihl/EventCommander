@@ -1,4 +1,4 @@
 <nav id="filter-list">
-    <a class="btn-primary" *ngFor="let category of categories">{{category}}</a>
+    <a class="btn-primary" (click)="filterBy(category)" *ngFor="let category of categories">{{category}}</a>
 </nav>
 
