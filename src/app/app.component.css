@@ -12,6 +12,8 @@
     grid-column-end: span 2;
     grid-row-start: 1;
     grid-row-end: span 1;
+    background-color: rgb(12, 23, 32);
+    
 }
 nav {
     display: flex;

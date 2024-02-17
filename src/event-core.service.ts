@@ -9,15 +9,16 @@ import { Observable, of } from 'rxjs';
 export class EventCoreService {
 
   constructor() { 
-    for(let x:number= 0; x < 5; x++){
+    for(let x:number= 0; x < 10; x++){
       let eventOne:calEvent = {
         id: x,
-        title: "Event"+x,
+        title: "Event "+x,
         description: `Description of event ${x}`,
         category: "Hobby",
-        eventDate: Date.now()
+        eventDate: new Date(Date.now() * (Math.random()*1.5))
       }
       this.events.push(eventOne);
+      
     }
   }
   events:calEvent[] = [];
