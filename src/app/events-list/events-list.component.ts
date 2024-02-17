@@ -14,10 +14,6 @@ export class EventsListComponent {
 
   ngOnInit():void {
     this.getEvents();
-    //Filter by category?
-    /* for (let event of this.events){
-      console.log(event.title);
-    } */
   }
   
   ngOnChanges(changes: SimpleChanges):void {
@@ -39,8 +35,6 @@ export class EventsListComponent {
   resetEvents(): void {
     this.filteredEvents = this.events;
   }
-
-  // https://angular.io/tutorial/tour-of-heroes/toh-pt3
 
   private filtered(filter: string):void {
     this.filteredEvents = this.events.filter((item) => item.category === filter)

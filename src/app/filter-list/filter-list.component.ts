@@ -16,7 +16,5 @@ export class FilterListComponent {
     this.filterEvent.emit(item);
   }
   
-
-
   @Output()filterEvent = new EventEmitter<string>();
 }
