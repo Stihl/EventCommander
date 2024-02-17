@@ -9,7 +9,7 @@ import { NgIf, NgFor } from '@angular/common';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Event Commander'; //lol, I dont think its that powerful of an app.
+  title = 'Event Commander';
   loggedIn = false;
   options:string[] = ["Add", "Edit"]; //Im not sure that this is how we want to accomplish this. but maybe it can allow for events to be editted or removed by a bool.
   filterHost:string ="";
