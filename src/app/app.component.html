@@ -18,6 +18,6 @@
             </div>
         </nav>
     </div>
-    <app-filter-list></app-filter-list>
-    <app-events-list></app-events-list>
+    <app-filter-list (filterEvent)="filterPass($event)"></app-filter-list>
+    <app-events-list [filterIn]="filterHost"></app-events-list>
 </div>    
