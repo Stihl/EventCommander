@@ -9,7 +9,7 @@ import { calEvent } from '../event';
 })
 
 export class FilterListComponent {
-  categories:string[] = ["Reset","Work","Hobby","Family","Medical", "Financial", "Chore"]
+  categories:string[] = ["Work","Hobby","Family","Medical", "Financial", "Chore"]
   filterText:string = "";
 
   filterBy(item:string){

@@ -1,3 +1,6 @@
+<div id="resetSpace">
+    <a class="btn-options" (click)="filterBy('Reset')">Reset</a>
+</div> 
 <nav id="filter-list">
     <a class="btn-primary" (click)="filterBy(category)" *ngFor="let category of categories">{{category}}</a>
 </nav>
