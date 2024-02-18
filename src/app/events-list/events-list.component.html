@@ -1,4 +1,8 @@
+<div id="option-bar">
+    <a *ngFor="let option of options" class="btn-options">{{option}}</a>
+</div>
 <div id="events-list">
+    
     <div *ngFor="let event of filteredEvents" class="event-body">
         <h2 class="event-title">{{event.title}}</h2>
         <h3 class="event-category">{{event.category}}</h3>

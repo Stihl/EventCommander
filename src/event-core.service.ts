@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { calEvent } from './app/event';
-import { Observable, of } from 'rxjs';
+import { Observable, Subscription, of } from 'rxjs';
+import { EventsListComponent } from './app/events-list/events-list.component';
 
 @Injectable({
   providedIn: 'root'
@@ -26,6 +27,15 @@ export class EventCoreService {
   ngOnInit(): void{
     
   }
+
+/*   newEvent():void {
+    this.eventListComp.addEvent().subscribe((Subscription)=>{
+      subscribeOn
+    })
+    this.events.push(event);
+    let tempEvent = of(event);
+    
+  } */
 
   getEvents(): Observable<calEvent[]> {
     const eventsList = of(this.events);
