@@ -1,7 +1,7 @@
 import { Component, Input, SimpleChanges } from '@angular/core';
 import { calEvent } from '../event';
 import { EventCoreService } from '../../event-core.service';
-import { Observable, BehaviorSubject, Subscriber } from 'rxjs';
+import { Observable, BehaviorSubject, Subscriber, of } from 'rxjs';
 
 @Component({
   selector: 'app-events-list',
@@ -9,16 +9,31 @@ import { Observable, BehaviorSubject, Subscriber } from 'rxjs';
   styleUrl: './events-list.component.css'
 })
 export class EventsListComponent {
+  
   constructor(private event_c: EventCoreService) { }
+
   events:calEvent[] = [];
   filteredEvents:calEvent[] = [];
-  options:string[] = ["Add", "Edit"];
   dateToday = new Date(Date.now())
-  //eventAdd = new Observable();
+  
   
   ngOnInit():void {
     this.getEvents();
   }
+  /*
+  pushEvent(): Observable<calEvent> {
+    const newEvent = of({
+      
+        id: 20,
+        title: "Event "+ 20,
+        description: `Description of event ${20}`,
+        category: "Hobby",
+        eventDate: new Date(Date.now() * (Math.random()*1.5))
+      
+    });
+    return newEvent;
+  }
+  */
   
   ngOnChanges(changes: SimpleChanges):void {
     const filter: string = changes['filterIn'].currentValue;
@@ -44,6 +59,38 @@ export class EventsListComponent {
     });
   } */
 
+  /*
+  addEvent():void{
+    console.log("Did")
+    this.event_c.activatedSubject.next({
+      id: 20,
+      title: "Event "+ 20,
+      description: `Description of event ${20}`,
+      category: "Hobby",
+      eventDate: new Date(Date.now() * (Math.random()*1.5))
+    });
+    
+  }
+  */
+
+  //Using setter NON-Observable
+  addEvent():void{
+    this.event_c.setEvent({
+      id: 20,
+      title: "Event "+ 20,
+      description: `Description of event ${20}`,
+      category: "Work",
+      eventDate: new Date(Date.now() * (Math.random()*1.5))
+    });
+  }
+
+
+  editEvent(){
+
+  }
+  deleteEvent(){
+
+  }
   resetEvents(): void {
     this.filteredEvents = this.events;
   }
