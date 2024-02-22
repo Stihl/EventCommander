@@ -1,5 +1,5 @@
 <div id="option-bar">
-    <a *ngFor="let option of options" class="btn-options">{{option}}</a>
+    <button (click)="addEvent()" class="btn-options">Add</button>
 </div>
 <div id="events-list">
     
@@ -7,17 +7,21 @@
         <h2 class="event-title">{{event.title}}</h2>
         <h3 class="event-category">{{event.category}}</h3>
         <p class="event-desc">{{event.description}}</p>
+        
         <h3 class="event-time">{{event.eventDate.toDateString()}}</h3>
-        <div>
+        <div class="tense-indicator">
             <div *ngIf="event.eventDate.getMilliseconds() > dateToday.getMilliseconds(); else elseBlock">
                 <div class="event-future-indicator"></div>
             </div>
             <ng-template #elseBlock>
                 <div class="event-past-indicator"></div>
             </ng-template>
-            
-
         </div>
+        <div class="event-options">
+            <button (click)="editEvent()" class="btn-options">Edit</button>
+            <button (click)="deleteEvent()" class="btn-options">Delete</button>
+        </div>
+        
         
         
     </div>

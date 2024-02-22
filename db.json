@@ -1,0 +1,60 @@
+{
+    "events": [
+        {
+            "id": 1,
+            "title": "First Event ",
+            "description": "A short Description of the first event",
+            "category": "Hobby",
+            "eventDate": 421422421421
+        },
+        {
+            "id": 2,
+            "title": "Second Time",
+            "description": "We are here at the second event",
+            "category": "Chore",
+            "eventDate": 8080823123220  
+        },
+        {
+            "id": 3,
+            "title": "Third ",
+            "description": "If only i had an AI that could generate these for me.",
+            "category": "Work",
+            "eventDate": 421422421421
+        },
+        {
+            "id": 4,
+            "title": "Quad",
+            "description": "Cycle, Or better known as a car.",
+            "category": "Hobby",
+            "eventDate": 8080823123220  
+        },
+        {
+            "id": 5,
+            "title": "Cinco",
+            "description": "De mayo",
+            "category": "Family",
+            "eventDate": 8080823123220  
+        },
+        {
+            "id": 6,
+            "title": "Hex",
+            "description": "not the devil machines again",
+            "category": "Financial",
+            "eventDate": 421422421421
+        },
+        {
+            "id": 7,
+            "title": "okay",
+            "description": "Help me chat gipitee",
+            "category": "Medical",
+            "eventDate": 8080823123220  
+        }
+    ],
+    "categories": [
+        {"category":"Work"},
+        {"category":"Hobby"},
+        {"category":"Family"},
+        {"category":"Medical"}, 
+        {"category":"Financial"}, 
+        {"category":"Chore"}]
+}

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { calEvent } from './app/event';
-import { Observable, Subscription, of } from 'rxjs';
-import { EventsListComponent } from './app/events-list/events-list.component';
+import { Observable, Subscription, of, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +9,8 @@ import { EventsListComponent } from './app/events-list/events-list.component';
 
 export class EventCoreService {
 
+  activatedSubject = new Subject<calEvent>();
+  
   constructor() { 
     for(let x:number= 0; x < 10; x++){
       let eventOne:calEvent = {
@@ -22,21 +24,25 @@ export class EventCoreService {
       
     }
   }
-  events:calEvent[] = [];
+  //private firstObsSub: Subscription = new Subscription();
+  private events:calEvent[] = [];
 
   ngOnInit(): void{
+    //this.addEvents();
+  }
+  ngOnDestroy(){
     
   }
-
-/*   newEvent():void {
-    this.eventListComp.addEvent().subscribe((Subscription)=>{
-      subscribeOn
-    })
+  setEvent(event:calEvent):void {
     this.events.push(event);
-    let tempEvent = of(event);
+  }
+  /*
+  newEvent(event:calEvent):Observable<calEvent> {
     
-  } */
-
+    return  this.events.push(event); //HTTP call
+  }
+  */
+  
   getEvents(): Observable<calEvent[]> {
     const eventsList = of(this.events);
     return eventsList
